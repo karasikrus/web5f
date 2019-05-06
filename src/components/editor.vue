@@ -46,7 +46,7 @@
             }, 300),
             save() {
                 const requestBody = qs.stringify({
-                    text: this.input
+                    content: this.input
                 });
                 const config = {
                     headers: {
@@ -76,8 +76,8 @@
                         this.input = '*Loading...*';
                         axios.get('https://web-5.herokuapp.com/documents/' + newVal)
                             .then(response => {
-                                if (response.data.text)
-                                    this.input = response.data.text;
+                                if (response.data.content)
+                                    this.input = response.data.content;
                                 else
                                     this.input = "";
                             })
