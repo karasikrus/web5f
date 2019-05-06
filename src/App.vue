@@ -1,10 +1,8 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="assets/logo.png">
+    <editor :selectedId="selectedId" @selected-changed="onSelectedIdChanged" @refresh-list="refreshList"></editor>
     <create-document @selected-changed="onSelectedIdChanged" @refresh-list="refreshList"></create-document>
     <document-list :selectedId="selectedId" @selected-changed="onSelectedIdChanged" ref="list"></document-list>
-    <editor :selectedId="selectedId" @selected-changed="onSelectedIdChanged" @refresh-list="refreshList"></editor>
-
 
   </div>
 </template>

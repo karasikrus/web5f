@@ -1,9 +1,11 @@
 <template>
     <div id="editor" v-if="selectedId">
         <div class="content">
-            <label>
-                <textarea :value="input" @input="update" :disabled="isDisabled" rows="15" cols="50"></textarea>
-             </label>
+            <div class="input-text-area">
+                <label>
+                    <textarea :value="input" @input="update" :disabled="isDisabled" rows="15" cols="50"></textarea>
+                </label>
+            </div>
             <div v-html="compiledMarkdown"></div>
         </div>
         <div class="buttons">
@@ -91,5 +93,7 @@
 </script>
 
 <style scoped>
-
+    .content{
+        display: flex;
+    }
 </style>
