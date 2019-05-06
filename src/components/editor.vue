@@ -6,7 +6,7 @@
                     <textarea :value="input" @input="update" :disabled="isDisabled" rows="15" cols="50"></textarea>
                 </label>
             </div>
-            <div v-html="compiledMarkdown"></div>
+            <div class="markdown-result" v-html="compiledMarkdown"></div>
         </div>
         <div class="buttons">
             <button @click="save">Сохранить</button>
@@ -95,5 +95,15 @@
 <style scoped>
     .content{
         display: flex;
+        text-align: center;
+    }
+    .input-text-area{
+        flex: 1;
+        border-color: brown;
+    }
+    .markdown-result{
+        text-align: left;
+        flex: 1;
+        color: brown;
     }
 </style>
