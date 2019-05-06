@@ -3,6 +3,7 @@
     <img alt="Vue logo" src="assets/logo.png">
     <create-document @selected-changed="onSelectedIdChanged" @refresh-list="refreshList"></create-document>
     <document-list :selectedId="selectedId" @selected-changed="onSelectedIdChanged" ref="list"></document-list>
+    <editor :selectedId="selectedId" @selected-changed="onSelectedIdChanged" @refresh-list="refreshList"></editor>
 
 
   </div>
@@ -13,9 +14,11 @@
 
 import CreateDocument from "./components/create-document";
 import DocumentList from "@/components/document-list";
+import Editor from "@/components/editor";
 export default {
   name: 'app',
   components: {
+    Editor,
     DocumentList,
     CreateDocument
 
