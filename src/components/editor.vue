@@ -39,7 +39,7 @@
         },
         computed: {
             compiledMarkdown: function () {
-                return marked(this.input, {sanitize: true})
+                return marked(this.input, {sanitize: true}).replace(/(?:\r\n|\r|\n)/g, '<br>');
             }
         },
         methods: {
